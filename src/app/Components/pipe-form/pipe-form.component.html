@@ -1,0 +1,18 @@
+<div class="container">
+  This form uses Pipes
+  <hr><br>
+    <form (ngSubmit)="submitForm()" #nameForm="ngForm">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Using "No pipes"</label>
+          <input [(ngModel)]="noPipeNum" type="text" class="form-control" placeholder="This takes decimals" name="total" (keyup.enter)="addHero(box.value); box.value=''" #box>
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Insert anything</label>
+          <input [(ngModel)]="assets" type="text" class="form-control" placeholder="This takes anything" name="assets">
+        </div> 
+        <div class="form-group">
+            <label for="formGroupExampleInput">Input converted</label>
+            <input type="text" class="form-control" placeholder="This shows the value converted to decimals" name="percent" disabled value="{{getAsset() | number: '.2-2'}}">
+        </div>
+    </form>
+</div> 

@@ -1,0 +1,40 @@
+<div class="container">
+  This form uses directives
+  <hr><br>
+  <form #nameForm="ngForm">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Ejemplo HTML5</label>
+      <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Example html5" step="any" placeholder="Precio Total">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Total (Decimales 2)</label>
+        <input [(ngModel)]="total" appAutoCompleteDecimal language="{{language}}" numDecimals="2" type="text" class="form-control" placeholder="This takes decimals" name="total">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Personal Assets (Decimal 8)</label>
+        <input [(ngModel)]="assets" appAutoCompleteDecimal language="{{language}}" numDecimals="8" type="text" class="form-control" placeholder="This takes decimals" name="assets">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Personal Assets (Percent with decimals 4)</label>
+      <input appAutoCompleteDecimal language="{{language}}" numDecimals="4" isPercent=false type="text" class="form-control" placeholder="This takes decimals" name="assets">
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Personal Assets (Percent of Total)</label>
+        <input value="{{getPercent()}}" type="text" class="form-control" placeholder="This takes decimals" name="percent" disabled>
+      </div>
+      <div class="form-group col-md-6">
+      <label for="dateP">This auto converts Dates</label>
+      <div class="input-group">
+        <input appAutoCompleteDate class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker" id="date">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" (click)="d.toggle(); focusDate();" type="button"><i class="far fa-calendar"
+            ></i></button> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <app-daza-select [data]="{ title: 'Estudiantes', multiple: true,arrvals: ['valor 1', 'valor 2', 'valor 3'] }" (emitData)="outputData($event)" #selectVals></app-daza-select> -->
+  <button class="btn btn-primary" (click)="clickButton()">Click here!!</button>
+  </form>
+</div> 

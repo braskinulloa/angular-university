@@ -1,0 +1,27 @@
+<form #nameForm="ngForm">
+    <div class="container">
+        <div class="form-group">
+            <input class="form-control" [(ngModel)]="title" name="title" placeholder="Put de Select Title here!!!">
+        </div>
+        <div class="form-check form-check-inline" (click)="changeMultiple()">
+            <input class="form-check-input" type="radio" name="multiple" id="multiple" value="Multiple true" [checked]="multiple">
+            <label class="form-check-label" for="multiple">
+                Multiple
+            </label>
+        </div>
+        <div class="form-check form-check-inline" (click)="changeMultiple()">
+            <input class="form-check-input" type="radio" name="multiple" id="noMultiple" value="Multiple false" [checked]="!multiple">
+            <label class="form-check-label" for="noMultiple">
+                No multiple
+            </label>
+        </div>
+        <div class="form-group">
+            <app-daza-select [title]="title" [arrvals]="arrvals" [multiple]="multiple" value="codigo" inner="descripcion" (dazaSelectValues)="dazaSelectValues($event)"></app-daza-select>
+        </div>
+    </div>
+</form>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let val of selectValues">{{ val }}</li>
+</ul>
+

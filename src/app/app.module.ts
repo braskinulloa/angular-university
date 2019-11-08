@@ -16,6 +16,12 @@ import { AutoCompleteDecimalDirective } from './Directives/auto-complete-decimal
 import { JumbotronComponent } from './Components/jumbotron/jumbotron.component';
 import { HomeComponent } from './Components/home/home.component';
 import { PipeFormComponent } from './Components/pipe-form/pipe-form.component';
+import { AutoCompleteDecimalPipe } from './Pipes/auto-complete-decimal.pipe';
+import { AutoCompleteDateDirective } from './Directives/auto-complete-date.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormParaComponentsComponent } from './Components/form-para-components/form-para-components.component';
+import { DazaGenericosModule } from './Modules/dazgenericos/daza-genericos.module';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling'
 
 @NgModule({
   declarations: [
@@ -25,7 +31,10 @@ import { PipeFormComponent } from './Components/pipe-form/pipe-form.component';
     AutoCompleteDecimalDirective,
     JumbotronComponent,
     HomeComponent,
-    PipeFormComponent
+    PipeFormComponent,
+    AutoCompleteDecimalPipe,
+    AutoCompleteDateDirective,
+    FormParaComponentsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +42,10 @@ import { PipeFormComponent } from './Components/pipe-form/pipe-form.component';
     AlertModule.forRoot(),
     APP_ROUTING,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    ScrollDispatchModule,
+    DazaGenericosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
