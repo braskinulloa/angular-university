@@ -1,0 +1,122 @@
+<div class="container">
+    <table class="table table-striped">
+
+        <thead>
+
+            <tr>
+
+                <th scope="col">#</th>
+                <th scope="col">Buscar</th>
+                <th scope="col">
+                    <div class="input-group">
+                        <input type="text" class="form-control" aria-label="Recipient's username" [(ngModel)]="mostrarId" name="mostrarId" aria-describedby="button-addon2" (keyup)="verDatos($event)">
+                    </div>
+                </th>
+                <th scope="col">Pagina {{numero || '1'}}</th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+            </tr>
+            <div *ngIf="buscadorActivo">
+                <tr *ngFor="let item of recibirObjeto let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.title}}</td>
+                    <td>{{item.release_date}}</td>
+                </tr>
+            </div>
+            <div *ngIf="buscadorActivo1">
+                <tr *ngFor="let item of DatosBuscados let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.title}}</td>
+                    <td>{{item.release_date}}</td>
+                </tr>
+            </div>
+        </tbody>
+    </table>
+    <div>
+        <a class="buttonLR" (click)="irAtrasFinal()" *ngIf="BotonAtras">
+            < </a>
+                <a class="buttonLR" (click)="irAtras()" *ngIf="BotonAtras">
+                    << </a>
+                        <button class="button" *ngFor="let item of cantBotones" (click)="CambiarPagina(item.id)">{{item.id}}</button>
+                        <a class="buttonLR" (click)="irAdelante()" *ngIf="BotonAdelante"> >> </a>
+                        <a class="buttonLR" (click)="irAdelanteFinal()" *ngIf="BotonAdelante"> > </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        DataTables
+    </div>
+    <div class="col-md-6">
+        <div class="input-group">
+            <input type="text" class="form-control" aria-label="Recipient's username" [(ngModel)]="mostrarId" name="mostrarId" aria-describedby="button-addon2" (keyup)="verDatos($event)">
+        </div>
+    </div>
+    <div class="col-md-3">
+        Pagina {{numero || '1'}}
+    </div>
+</div>
+<div class="row py-3">
+    <div class="col-md-1">
+        <span>#</span>
+    </div>
+    <div class="col-md-3">
+        <span>Id</span>
+    </div>
+    <div class="col-md-5">
+        <span>Titulo</span>
+    </div>
+    <div class="col-md-3">
+        <span>Pagina {{numero || '1'}}</span>
+    </div>
+</div>
+<span *ngIf="buscadorActivo">
+    <div class="row" *ngFor="let item of recibirObjeto let i = index">
+        <div class="col-md-1">
+            {{i+1}}
+        </div>
+        <div class="col-md-3">
+            {{item.id}}
+        </div>
+        <div class="col-md-5">
+            {{item.title}}
+        </div>
+        <div class="col-md-3">
+            {{item.release_date}}
+        </div>
+    </div>
+</span>
+<span *ngIf="buscadorActivo1">
+    <div class="row" *ngFor="let item of DatosBuscados let i = index">
+        <div class="col-md-3">
+            {{i+1}}
+        </div>
+        <div class="col-md-3">
+            {{item.id}}
+        </div>
+        <div class="col-md-3">
+            {{item.title}}
+        </div>
+        <div class="col-md-3">
+            {{item.release_date}}
+        </div>
+    </div>
+</span>
+<div>
+    <a class="buttonLR" (click)="irAtrasFinal()" *ngIf="BotonAtras">
+        < </a>
+            <a class="buttonLR" (click)="irAtras()" *ngIf="BotonAtras">
+                << </a>
+                    <button class="button" *ngFor="let item of cantBotones" (click)="CambiarPagina(item.id)">{{item.id}}</button>
+                    <a class="buttonLR" (click)="irAdelante()" *ngIf="BotonAdelante"> >> </a>
+                    <a class="buttonLR" (click)="irAdelanteFinal()" *ngIf="BotonAdelante"> > </a>
+</div>
