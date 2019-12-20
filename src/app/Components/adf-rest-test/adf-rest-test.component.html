@@ -1,0 +1,19 @@
+<app-buscador-ult [enviarObjetos]="data" (ejecutarServicio)="escuchaHijo($event)" (recibirObjeto)="datosObtenidos($event)"></app-buscador-ult>
+<h2>AMCharts</h2>
+<div id="chartdiv"></div>
+<h2>ngx-echarts</h2>
+<div echarts [options]="chartOption" class="demo-chart"></div>
+<h2>ngx-charts</h2>
+<ngx-charts-bar-horizontal
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="single"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel">
+</ngx-charts-bar-horizontal>

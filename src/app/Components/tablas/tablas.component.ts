@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@angular/core';
-import { DatosService } from '../../Services/datos.service';
+// import { DatosService } from '../../Services/datos.service';
 
 
 @Component({
@@ -39,15 +39,15 @@ handleKeyboardEvent(event: KeyboardEvent) {
    this.recibirObjeto = this.recibirObjeto;
   }
 }
-  constructor(private service: DatosService) {
-    this.buscadorActivo = true;
-    this.buscadorActivo1 = false;
-    setTimeout(() => {
-      this.cantidadIntroducida = this.numeroBotones;
-      this.fin = this.numeroBotones;
-      console.log(this.cantidadIntroducida);
-    }, 800);
-    this.cantidadPaginas();
+  constructor(/*private service: DatosService*/) {
+    // this.buscadorActivo = true;
+    // this.buscadorActivo1 = false;
+    // setTimeout(() => {
+    //   this.cantidadIntroducida = this.numeroBotones;
+    //   this.fin = this.numeroBotones;
+    //   console.log(this.cantidadIntroducida);
+    // }, 800);
+    // this.cantidadPaginas();
     
 
   }

@@ -9,7 +9,7 @@ import { DirectiveFormComponent } from './Components/directive-form/directive-fo
 
 //para rutas y forms
 import { APP_ROUTING } from './app.routes';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientXsrfModule, HttpClientJsonpModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { AutoCompleteDecimalDirective } from './Directives/auto-complete-decimal.directive';
@@ -21,7 +21,12 @@ import { AutoCompleteDateDirective } from './Directives/auto-complete-date.direc
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormParaComponentsComponent } from './Components/form-para-components/form-para-components.component';
 import { DazaGenericosModule } from './Modules/dazgenericos/daza-genericos.module';
-import { ScrollDispatchModule } from '@angular/cdk/scrolling'
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { AdfRestTestComponent } from './Components/adf-rest-test/adf-rest-test.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { DazaChartsTestComponent } from './Components/daza-charts-test/daza-charts-test.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +39,9 @@ import { ScrollDispatchModule } from '@angular/cdk/scrolling'
     PipeFormComponent,
     AutoCompleteDecimalPipe,
     AutoCompleteDateDirective,
-    FormParaComponentsComponent
+    FormParaComponentsComponent,
+    AdfRestTestComponent,
+    DazaChartsTestComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +52,9 @@ import { ScrollDispatchModule } from '@angular/cdk/scrolling'
     FormsModule,
     NgbModule,
     ScrollDispatchModule,
-    DazaGenericosModule
+    DazaGenericosModule,
+    NgxEchartsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

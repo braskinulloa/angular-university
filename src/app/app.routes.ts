@@ -3,7 +3,8 @@ import { DirectiveFormComponent } from './Components/directive-form/directive-fo
 import { HomeComponent } from './Components/home/home.component';
 import { PipeFormComponent } from './Components/pipe-form/pipe-form.component';
 import { FormParaComponentsComponent } from './Components/form-para-components/form-para-components.component';
-
+import { AdfRestTestComponent } from './Components/adf-rest-test/adf-rest-test.component';
+import { DazaChartsTestComponent } from './Components/daza-charts-test/daza-charts-test.component';
 
 
 const APP_ROUTES: Routes = [
@@ -12,6 +13,8 @@ const APP_ROUTES: Routes = [
   { path: 'directive-form', component: DirectiveFormComponent},
   { path: 'pipe-form', component: PipeFormComponent},
   { path: 'components-form', component: FormParaComponentsComponent},
+  { path: 'adf_rest_test', component: AdfRestTestComponent},
+  { path: 'daza-charts', component: DazaChartsTestComponent},
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
