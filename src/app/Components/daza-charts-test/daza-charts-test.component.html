@@ -1,1 +1,11 @@
-<p><daza-pie-chart [chart_data]="chart_data" [newOptions]="newOptions"></daza-pie-chart></p>
+<div class="row">
+    <div class="col-md-6">
+        <p><daza-bar-chart [chartData]="bar_chart_data" [newOptions]="newOptions" [othersVal]="othersVal"></daza-bar-chart></p>
+    </div>
+    <div class="col-md-6">
+        <p><daza-multiple-xaxis-chart [chartData]="multiple_xaxis_chart_data" [newOptions]="newOptions" [othersData]="others"></daza-multiple-xaxis-chart></p>
+    </div>
+    <div class="col-md-6">
+        <p><daza-pie-chart [chartData]="pie_chart_data" [newOptions]="newOptions" [othersVal]="othersVal"></daza-pie-chart></p>
+    </div>
+</div>
