@@ -1,0 +1,7 @@
+<input class="form-control" type="text" name="url" id="" [(ngModel)]="url">
+
+<p>{{url}}</p>
+
+<div class="container" *ngIf="chartData">
+    <daza-candlestick-chart [chartData]="chartData"></daza-candlestick-chart>
+</div>

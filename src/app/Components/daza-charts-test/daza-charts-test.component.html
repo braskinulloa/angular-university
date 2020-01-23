@@ -1,11 +1,27 @@
 <div class="row">
+    <div class="col-md-12">
+        <daza-bar-y-category-stack-chart [chartData]="bar_y_category_stack"></daza-bar-y-category-stack-chart>
+    </div>
+    <div class="col-md-6">
+        <daza-sunburst-visual-map-chart [chartData]="sunburst_chart_data"></daza-sunburst-visual-map-chart>
+    </div>
+    <div class="col-md-6">
+        <daza-polar-punch-card-chart [chartData]="polar_punch_card_data"></daza-polar-punch-card-chart>
+    </div>
+    <div class="col-md-12">
+        <daza-scatter-single-axis-chart [chartData]="scatter_single_axis_chart_data"></daza-scatter-single-axis-chart>
+    </div>
+    <div class="col-md-6">
+        <p><daza-radar-chart [chartData]="radar_chart_data" [newOptions]="newOptions" [othersVal]="othersVal"></daza-radar-chart></p>
+    </div>
     <div class="col-md-6">
         <p><daza-bar-chart [chartData]="bar_chart_data" [newOptions]="newOptions" [othersVal]="othersVal"></daza-bar-chart></p>
     </div>
     <div class="col-md-6">
-        <p><daza-multiple-xaxis-chart [chartData]="multiple_xaxis_chart_data" [newOptions]="newOptions" [othersData]="others"></daza-multiple-xaxis-chart></p>
+        <p><daza-multiple-xaxis-chart [chartData]="multiple_xaxis_chart_data" [newOptions]="newOptions"></daza-multiple-xaxis-chart></p>
     </div>
     <div class="col-md-6">
-        <p><daza-pie-chart [chartData]="pie_chart_data" [newOptions]="newOptions" [othersVal]="othersVal"></daza-pie-chart></p>
+        <p><daza-pie-chart [chartData]="pie_chart_data"></daza-pie-chart></p>
+        <!-- <p><daza-pie-chart [chartData]="pie_chart_data" [newOptions]="newOptions" [othersVal]="othersVal"></daza-pie-chart></p> -->
     </div>
 </div>

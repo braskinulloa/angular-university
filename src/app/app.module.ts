@@ -26,6 +26,7 @@ import { AdfRestTestComponent } from './Components/adf-rest-test/adf-rest-test.c
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DazaChartsTestComponent } from './Components/daza-charts-test/daza-charts-test.component';
+import { ApiUseComponent } from './Components/api-use/api-use.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { DazaChartsTestComponent } from './Components/daza-charts-test/daza-char
     FormParaComponentsComponent,
     AdfRestTestComponent,
     DazaChartsTestComponent,
+    ApiUseComponent,
   ],
   imports: [
     BrowserModule,
